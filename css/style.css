@@ -6734,3 +6734,153 @@ button.close {
     display: none !important;
   }
 }
+
+
+
+
+
+
+
+
+
+header.navbar {
+  background: #ffebb7;
+  color: #2e4057;
+}
+
+div.region-navigation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+div.region-navigation a, div.region-navigation nav {
+  flex-grow: 1;
+}
+
+header nav {
+  font-size: 2em;
+}
+
+.underrubrik {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -18px;
+  margin-left: 0;
+  margin-right: 0;
+  color: #66a182;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+.underrubrik .slogan {
+  flex-grow: 2;
+}
+ .underrubrik .nummer {
+   flex-grow: 1;
+ }
+
+.huvud {
+  background: url('http://spectradsign.se/brsochyr.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 25em;
+}
+
+/* Korten */
+
+.kort section {
+  background: #caffb9;
+  padding: 0.5em;
+}
+
+.eniro {
+  margin-top: 2em;
+}
+
+/* Footer */
+
+footer.footer {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffebb7+0,ffe084+100 */
+  background: #ffebb7; /* Old browsers */
+  background: linear-gradient(to right, #ffebb7 0%,#ffe084 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border-radius: 0 2em 0 0;
+  margin-top: -10em;
+  margin-bottom: 5em;
+  padding-top: 10em;
+  clip-path: polygon(
+    0 8vw,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+.google_map, #block-kontaktaoss {
+  border: solid 1px #2e4057;
+  border-radius: 4px;
+  box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.5);
+}
+
+
+footer nav {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffe39e+0,ffd56b+100 */
+  background: #ffe39e; /* Old browsers */
+  background: linear-gradient(to right,  #ffe39e 0%,#ffd56b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+
+
+
+/* Kontakta oss */
+
+#block-kontaktaoss {
+  margin-top: 2em;
+}
+div.org, span.fax, span.region, span.country-name, abbr[title=voice] {
+  display: none;
+}
+abbr[title=voice]:after, abbr[title=fax]:after {
+  content: ":";
+}
+footer {
+  background: #5d86a7;
+  color: #fff;
+}
+footer ul, li {
+  margin: 0;
+  padding: 0;
+}
+footer li {
+  list-style: none;
+}
+footer a {
+  color: #fff;
+}
+footer h2 {
+  text-align: center;
+}
+footer section {
+  background: #5d86a7;
+  padding: 0 1em 1em 1em;
+}
+footer .social-media {
+  color: #fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+footer svg {
+  width: 2em;
+  height: 2em;
+}
+.adr svg, .phone svg, .epost svg {
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+.adr {
+  margin-bottom: 2em;
+}
