@@ -6772,22 +6772,27 @@ header nav {
   text-transform: uppercase;
   font-size: 1.4em;
   font-weight: bold;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 }
 .underrubrik .slogan {
   flex-grow: 2;
 }
  .underrubrik .nummer {
    flex-grow: 1;
+   text-align: right;
  }
 
-.huvud {
+.main-container {
   background: url('http://spectradsign.se/brsochyr.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    min-height: 25em;
+}
+
+.huvud {
+  min-height: 25em;
+  background: rgba(246,246,246,0);
 }
 
 /* Korten */
@@ -6795,6 +6800,13 @@ header nav {
 .kort section {
   background: #caffb9;
   padding: 0.5em;
+}
+
+/* Recensioner */
+
+.recensioner {
+  background: rgba(255,255,255,0.8);
+  background: linear-gradient(to bottom, rgba(246,246,246,0) 0%, rgba(245,245,245,0.75) 5%, rgba(237,237,237,1) 100%);
 }
 
 .eniro {
@@ -6805,8 +6817,8 @@ header nav {
 
 footer.footer {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffebb7+0,ffe084+100 */
-  background: #ffebb7; /* Old browsers */
-  background: linear-gradient(to right, #ffebb7 0%,#ffe084 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: #ffebb7;
+  background: linear-gradient(to right, #ffebb7 0%,#ffe084 100%);
   border-radius: 0 2em 0 0;
   margin-top: -10em;
   margin-bottom: 5em;

@@ -186,12 +186,19 @@
 
 
 
-
-<div class="kort row" style="background:#5d86a7;">
+{#
+<div class="kort row">
   <div class="col-md-3">{{ render_block('dettaarvi') }}</div>
   <div class="col-md-3"><section>{{ drupal_view('just_nu', 'block_1') }}</section></div>
   <div class="col-md-3"><section>{{ drupal_view('en_produkt', 'block_1') }}</section></div>
   <div class="col-md-3">{{ render_block('recensionfacebook') }}</div>
+</div>
+#}
+
+<div class="kort row">
+  <div class="col-md-4">{{ render_block('dettaarvi') }}</div>
+  <div class="col-md-4"><section>{{ drupal_view('just_nu', 'block_1') }}</section></div>
+  <div class="col-md-4"><section>{{ drupal_view('en_produkt', 'block_1') }}</section></div>
 </div>
 
 
