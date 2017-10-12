@@ -6812,7 +6812,7 @@ header nav {
 .main-cover {
   width: 100%;
   margin: 0;
-  background: url('http://spectradsign.se/brsochyr.jpg') no-repeat center center fixed;
+  background: url('/themes/sdk/images/brsochyr.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -7073,6 +7073,10 @@ footer .social-media {
 footer svg {
   width: 2em;
   height: 2em;
+  margin: 0.5em 0;
+}
+footer p {
+  margin: 0;
 }
 .adr svg, .phone svg, .epost svg {
   vertical-align: middle;
