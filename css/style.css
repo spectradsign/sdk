@@ -6789,17 +6789,28 @@ header nav {
   width: 10em;
 }
 
+.navbar-default .navbar-nav > .active > a.is-active, .navbar-default .navbar-nav > .active > a.is-active:hover, .navbar-default .navbar-nav > .active > a.is-active:focus {
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #2e4057;
+}
+
+
+
 .underrubrik {
   display: flex;
   justify-content: space-between;
   margin-top: -18px;
   margin-left: 0;
   margin-right: 0;
-  color: #66a182;
+  color: #2e4057;
   text-transform: uppercase;
   font-size: 1.4em;
   font-weight: bold;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.2);
 }
 .underrubrik .slogan {
   flex-grow: 2;
@@ -6836,6 +6847,7 @@ header nav {
 
 
 section.postit {
+  z-index: 2;
   line-height: 1;
   text-align:center;
   width: 275px;
@@ -6853,19 +6865,19 @@ section.postit {
 }
 
 section.postit:after {
-   content: "";
+  content: "";
   position:absolute;
   z-index: -1;
-  right:-0px; bottom:20px;
-  width:200px;
+  right:-0px; bottom:10px;
+  width:275px;
   height: 25px;
   background: rgba(0, 0, 0, 0.2);
   box-shadow:2px 15px 5px rgba(0, 0, 0, 0.40);
--moz-transform: matrix(-1, -0.1, 0, 1, 0, 0);
- -webkit-transform: matrix(-1, -0.1, 0, 1, 0, 0);
-      -o-transform: matrix(-1, -0.1, 0, 1, 0, 0);
-     -ms-transform: matrix(-1, -0.1, 0, 1, 0, 0);
-         transform: matrix(-1, -0.1, 0, 1, 0, 0);
+  -moz-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+   -webkit-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+        -o-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+       -ms-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+           transform: matrix(-1, -0.1, 0, 1, 0, 0);
 }
 
 section.yellow {
@@ -6876,10 +6888,12 @@ section.yellow {
    background: -o-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* Opera 11.10+ */
    background: -ms-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* IE10+ */
    background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* W3C */
+   transform: rotate(-2deg);
 }
 
 section.pink {
   background: hotpink;
+transform: rotate(2deg);
 }
 
 
@@ -6901,7 +6915,7 @@ section.pink {
   padding: 1em;
   margin: 0.5em;
   background: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
   width: 80%;
   position: relative;
   z-index: 0;
@@ -6928,7 +6942,9 @@ section.pink {
   transform: rotate(1.4deg);
 }
 
-
+.papper h2 a {
+  color: #2e4057;
+}
 
 
 
