@@ -4,18 +4,6 @@
  * Modify this file to override the Bootstrap Framework variables. You can copy
  * these variables directly from ../bootstrap/less/variables.less to this file.
  */
-/**
- * Colours
- *
- * SDK Blue #6699cc
- * SDK Peach #f9bea0
- *
- * Eigengrau #16161D
- *
- *
- *
- *
- */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -6744,7 +6732,18 @@ button.close {
 
 
 
-
+/**
+ * Colours
+ *
+ * SDK Blue #6699cc
+ * SDK Peach #f9bea0
+ *
+ * Eigengrau #16161D
+ *
+ *
+ *
+ *
+ */
 
 
 
@@ -6798,7 +6797,11 @@ header nav {
   color: #2e4057;
 }
 
-
+.navbar ul.social-media {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
 
 .underrubrik {
   display: flex;
@@ -6844,7 +6847,7 @@ header nav {
 
 
 
-
+/* Postit */
 
 section.postit {
   z-index: 2;
@@ -7086,7 +7089,7 @@ footer .social-media {
   justify-content:space-between;
   align-items:center;
 }
-footer svg {
+footer svg, header svg {
   width: 2em;
   height: 2em;
   margin: 0.5em 0;
