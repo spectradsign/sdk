@@ -96,6 +96,7 @@
       {% if not navbar_attributes.hasClass(container) %}
         </div>
       {% endif %}
+      {{ render_block('kontaktlinje') }}
     </header>
   {% endblock %}
 {% endif %}
@@ -106,24 +107,24 @@
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
 
     <div class="row">
-      <div class="col-sm-12">
-        <h2 class="underrubrik"><span class="slogan">Allt från visitkort till byggritningar</span><span class="nummer"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" style="width:2em;"><rect fill="#ffe79e" height="512" rx="15%" width="512"></rect><g fill="#5d86a7"><path d="m425 347c-12-10-26-19-39-27-27-18-50-19-69 8-11 16-27 18-43 11-45-21-79-50-98-95-9-19-9-37 12-50 10-7 22-16 21-32-2-21-52-91-73-98-9-3-16-3-25 0-48 16-67 54-49 99a526 526 0 0 0 292 289l20 6c31 0 67-29 79-58 10-28-12-40-28-53zm-153-270c99 15 145 62 157 161 2 9-3 23 12 23 13 0 10-13 10-22 2-93-81-179-176-182-7 1-22-5-24 10 0 10 12 9 21 10z"></path><path d="m291 105c-8-2-22-6-25 7s12 12 21 15c62 13 83 35 93 95 2 8-1 22 14 20 11-1 7-13 8-20 0-59-50-111-111-117z"></path><path d="m297 152c-6 0-13 1-16 7-3 10 4 13 12 15 25 4 38 19 41 42 0 7 5 12 12 12 9-2 11-9 9-16 0-28-31-60-58-60z"></path></g></svg> 031 - 704 98 50</span></h2>
+      <div class="col-md-12">
+        <h2 class="underrubrik"><span class="slogan">Allt från visitkort till byggritningar</span><span class="nummer"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><rect fill="#ffe79e" height="512" rx="15%" width="512"></rect><g fill="#2e4057"><path d="m425 347c-12-10-26-19-39-27-27-18-50-19-69 8-11 16-27 18-43 11-45-21-79-50-98-95-9-19-9-37 12-50 10-7 22-16 21-32-2-21-52-91-73-98-9-3-16-3-25 0-48 16-67 54-49 99a526 526 0 0 0 292 289l20 6c31 0 67-29 79-58 10-28-12-40-28-53zm-153-270c99 15 145 62 157 161 2 9-3 23 12 23 13 0 10-13 10-22 2-93-81-179-176-182-7 1-22-5-24 10 0 10 12 9 21 10z"></path><path d="m291 105c-8-2-22-6-25 7s12 12 21 15c62 13 83 35 93 95 2 8-1 22 14 20 11-1 7-13 8-20 0-59-50-111-111-117z"></path><path d="m297 152c-6 0-13 1-16 7-3 10 4 13 12 15 25 4 38 19 41 42 0 7 5 12 12 12 9-2 11-9 9-16 0-28-31-60-58-60z"></path></g></svg> 031 - 704 98 50</span></h2>
       </div>
     </div>
 
     <div class="row">
 
       <div class="huvud col-sm-12">
-        <div class="col-sm-6">
-            <section class="postit yellow">
+        <div class="col-md-4 col-md-push-1 left">
+            <section class="postit">
               <h2>Öppettider</h2>
               <p>Oftast 9 - 15 alla vardagar, men vi kan vara på leverans, <strong>så ring innan!</strong></p>
             </section>
         </div>
-        <div class="col-sm-6">
-            <section class="postit pink">
+        <div class="col-md-4 col-md-push-3 right">
+            <section class="postit">
               <h2>Kom ihåg!</h2>
-              <p>Vi närmar oss vinter nu, dags att börja tänka på er egna almanacka för 2018!</p>
+              <p>Vintern är här, det är dags att börja tänka på er egna almanacka för 2018!</p>
             </section>
         </div>
       </div>
@@ -241,10 +242,17 @@ var nr_transparency = true; // Set this to true to have a transparent widget wit
 
   {% block footer %}
     <footer class="footer {{ container }}" role="contentinfo">
-      <div class="row">
-        <div class="col-md-7 col-md-offset-1"><iframe class="google_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d68036.39321223683!2d11.845342755175082!3d57.79901978114976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff335044290f9%3A0x8ebf500890594312!2sSpectra+D&#39;Sign+Kopiering+AB!5e0!3m2!1ssv!2sse!4v1502039522793" width="500" height="300" frameborder="0" allowfullscreen></iframe></div>
-        <div class="col-md-3">{{ render_block('kontaktaoss') }}</div>
-      </div>
+
+/*
+<div class="row">
+<div class="col-md-7 col-md-offset-1"><iframe allowfullscreen="" class="google_map" frameborder="0" height="300" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d68036.39321223683!2d11.845342755175082!3d57.79901978114976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff335044290f9%3A0x8ebf500890594312!2sSpectra+D'Sign+Kopiering+AB!5e0!3m2!1ssv!2sse!4v1502039522793" width="500"></iframe></div>
+
+<div class="col-md-4">{{ render_block('kontaktaoss') }}</div>
+</div>
+*/
+
+
+
       {{ page.footer }}
     </footer>
   {% endblock %}

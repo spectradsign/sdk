@@ -6735,10 +6735,29 @@ button.close {
 /**
  * Colours
  *
+ *
+ * Coolors.co
+ * Dark blue: #2e4057
+ * Yellow: #ffe79e
+ * Blue: #5d86a7
+ * Green: #66a182
+ * Light green: #caffb9
+ *
+ *
  * SDK Blue #6699cc
  * SDK Peach #f9bea0
  *
  * Eigengrau #16161D
+ *
+ *
+ *
+ *
+ *
+ * En annan SDK Blue #5d86a7
+ *
+ *
+ * Original SDK Blue #5a8cad
+ * Original SDK Peach #f7bda5
  *
  *
  *
@@ -6764,9 +6783,23 @@ html {
   padding: 0;
 }
 
+/*
+.main-container {
+  background: url("https://web.archive.org/web/20050925154038im_/http://www.spectradsign.se/img/bg.gif");
+}
+*/
+
+svg * {
+    transition: all 0.5s;
+}
 
 header.navbar {
-  background: #ffebb7;
+  background: #ffe79e;
+  color: #2e4057;
+  border-color: #2e4057;
+}
+
+header.navbar a {
   color: #2e4057;
 }
 
@@ -6785,7 +6818,7 @@ header nav {
 }
 
 .logo img {
-  width: 10em;
+  height: 3.5em;
 }
 
 .navbar-default .navbar-nav > .active > a.is-active, .navbar-default .navbar-nav > .active > a.is-active:hover, .navbar-default .navbar-nav > .active > a.is-active:focus {
@@ -6801,6 +6834,18 @@ header nav {
   display: flex;
   justify-content: flex-end;
   list-style: none;
+}
+
+.navbar .social-media {
+  margin-top: 1em;
+}
+
+.navbar .social-media li {
+  margin-left: 0.5em;
+}
+
+.navbar ul.social-media svg:hover {
+  background: #66a182;
 }
 
 .underrubrik {
@@ -6822,6 +6867,10 @@ header nav {
    flex-grow: 1;
    text-align: right;
  }
+.underrubrik svg {
+  height: 0.8em;
+  width: 0.8em;
+}
 
 .main-cover {
   width: 100%;
@@ -6849,66 +6898,60 @@ header nav {
 
 /* Postit */
 
-section.postit {
-  z-index: 2;
+.postit {
   line-height: 1;
   text-align:center;
   width: 275px;
   margin: 25px;
   min-height:250px;
   max-height:250px;
-  padding:1em 0.5em;
+  padding: 0 0.3em;
   position:relative;
   border:1px solid #E8E8E8;
-  border-top:1em solid #fdfd86;
+  border-top:60px solid #fdfd86;
   font-family:'Reenie Beanie';
-  font-size:22px;
+  font-size:30px;
   border-bottom-right-radius: 60px 5px;
   display:inline-block;
+  background: #ffff88; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(81%,#ffff88), color-stop(82%,#ffff88), color-stop(82%,#ffff88), color-stop(100%,#ffffc6)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* IE10+ */
+  background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-section.postit:after {
+.postit:after {
   content: "";
   position:absolute;
   z-index: -1;
-  right:-0px; bottom:10px;
-  width:275px;
+  right:-0px; bottom:20px;
+  width:200px;
   height: 25px;
   background: rgba(0, 0, 0, 0.2);
   box-shadow:2px 15px 5px rgba(0, 0, 0, 0.40);
-  -moz-transform: matrix(-1, -0.1, 0, 1, 0, 0);
-   -webkit-transform: matrix(-1, -0.1, 0, 1, 0, 0);
-        -o-transform: matrix(-1, -0.1, 0, 1, 0, 0);
-       -ms-transform: matrix(-1, -0.1, 0, 1, 0, 0);
-           transform: matrix(-1, -0.1, 0, 1, 0, 0);
+    -moz-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+    -webkit-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+    -o-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+    -ms-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+  transform: matrix(-1, -0.1, 0, 1, 0, 0);
 }
 
-section.yellow {
-   background: #ffff88; /* Old browsers */
-   background: -moz-linear-gradient(-45deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* FF3.6+ */
-   background: -webkit-gradient(linear, left top, right bottom, color-stop(81%,#ffff88), color-stop(82%,#ffff88), color-stop(82%,#ffff88), color-stop(100%,#ffffc6)); /* Chrome,Safari4+ */
-   background: -webkit-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* Chrome10+,Safari5.1+ */
-   background: -o-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* Opera 11.10+ */
-   background: -ms-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* IE10+ */
-   background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* W3C */
-   transform: rotate(-2deg);
+.postit h2 {
+  margin-top: -0.5em;
 }
 
-section.pink {
-  background: hotpink;
-transform: rotate(2deg);
+/*
+.right {
+  transform: rotate(4deg);
 }
 
-
-
-
-
-
-
-
-
-
-
+.left {
+  transform: rotate(-3deg);
+}
+*/
 
 
 
@@ -7035,7 +7078,7 @@ footer.footer {
   padding-top: 10em;
 }
 
-.google_map, #block-kontaktaoss {
+#block-googlemaps, #block-kontaktaoss-2 {
   border: solid 1px #2e4057;
   border-radius: 4px;
   box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.5);
@@ -7048,13 +7091,30 @@ footer nav {
   background: linear-gradient(to right,  #ffe39e 0%,#ffd56b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
+.region-footer {
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
+
+/* Google maps */
+
+#block-googlemaps {
+  height: 300px;
+  width: 500px;
+  margin: 0;
+  padding: 0;
+}
 
 
 /* Kontakta oss */
 
-#block-kontaktaoss {
-  margin-top: 2em;
+#block-kontaktaoss-2 {
+  margin-top: 0em;
+  width: 22em;
+  background: #5d86a7;
+  padding: 0 1em 1em 1em;
 }
 div.org, span.fax, span.region, span.country-name, abbr[title=voice] {
   display: none;
@@ -7078,10 +7138,6 @@ footer a {
 }
 footer h2 {
   text-align: center;
-}
-footer section {
-  background: #5d86a7;
-  padding: 0 1em 1em 1em;
 }
 footer .social-media {
   color: #fff;
