@@ -6778,9 +6778,18 @@ button.close {
 
 
 
-html {
+html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-cover, .main-container {
+  flex: 1 0 auto;
 }
 
 /*
@@ -6794,24 +6803,42 @@ svg * {
 }
 
 header.navbar {
-  background: #ffe79e;
+  background: inherit;
   color: #2e4057;
-  border-color: #2e4057;
+  border: 0;
 }
 
 header.navbar a {
   color: #2e4057;
 }
 
+.navbar-header, .region-navigation {
+  width: 100%;
+}
+
 div.region-navigation {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
 }
 
-div.region-navigation a, div.region-navigation nav {
-  flex-grow: 1;
+
+div.region-navigation a, .social-media {
+
 }
+
+div.region-navigation nav {
+  flex: 3;
+}
+
+.navbar ul.social-media {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+
 
 header nav {
   font-size: 2em;
@@ -6826,15 +6853,11 @@ header nav {
   background-color: transparent;
 }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #2e4057;
+  text-transform: uppercase;
 }
 
-.navbar ul.social-media {
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-}
 
 .navbar .social-media {
   margin-top: 1em;
@@ -6844,43 +6867,35 @@ header nav {
   margin-left: 0.5em;
 }
 
+.navbar ul.social-media svg {
+  background: inherit;
+}
+
 .navbar ul.social-media svg:hover {
   background: #66a182;
 }
 
 .underrubrik {
-  display: flex;
-  justify-content: space-between;
   margin-top: -18px;
   margin-left: 0;
   margin-right: 0;
   color: #2e4057;
-  text-transform: uppercase;
-  font-size: 1.4em;
+  color: #66a182;
+  text-align: center;
+  font-size: 1em;
   font-weight: bold;
   text-shadow: 1px 1px 1px rgba(255,255,255,0.2);
-}
-.underrubrik .slogan {
-  flex-grow: 2;
-}
- .underrubrik .nummer {
-   flex-grow: 1;
-   text-align: right;
- }
-.underrubrik svg {
-  height: 0.8em;
-  width: 0.8em;
+  font-family: 'Calligraffitti', cursive;
 }
 
-.main-cover {
-  width: 100%;
+body {
   margin: 0;
-  background: url('/themes/sdk/images/brsochyr.png') no-repeat center center fixed;
+  padding: 0;
+  background: url('/themes/sdk/images/henrik.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    z-index: -10;
 }
 
 .huvud {
@@ -6943,7 +6958,7 @@ header nav {
   margin-top: -0.5em;
 }
 
-/*
+
 .right {
   transform: rotate(4deg);
 }
@@ -6951,18 +6966,21 @@ header nav {
 .left {
   transform: rotate(-3deg);
 }
-*/
+
 
 
 
 /* Korten */
 
+.kort {
+  margin: 3em 0;
+}
+
 .papper {
   padding: 1em;
   margin: 0.5em;
-  background: #fff;
+  background: #fff url("/themes/sdk/images/lightpaperfibers/lightpaperfibers/lightpaperfibers.png");
   box-shadow: 0 0 10px rgba(0,0,0,0.8);
-  width: 80%;
   position: relative;
   z-index: 0;
 }
@@ -7005,51 +7023,14 @@ header nav {
 
 /* Recensioner */
 
-.recensioner {
-  position: relative;
-  margin-top: 2em;
-	background: #fff;
-  box-shadow: 2px -2px 1px 1px rgba(0,0,0,0.2);
+.eniro iframe {
+  border: solid 1px #2e4057;
+  border-radius: 4px;
 }
-
-.eniro {
-  margin-top: 2em;
-}
-
-
-
-
-
-
 
 .recensioner {
-	overflow: hidden;
-	transition: 0.15s ease-in-out all;
+    min-height: 400px;
 }
-
-.recensioner:hover {
-	border-radius: 0 20px 0 0;
-}
-
-.recensioner:after {
-	content: '';
-	width: 0;
-	height: 0;
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 30;
-	box-shadow: -5px 2px 5px rgba( 0, 0, 0, 0.3 );
-	transition: 0.15s ease-in-out all;
-}
-
-.recensioner:hover:after{
-	width: 15px;
-	height: 15px;
-	transform: rotate(-10deg) translate3d( 0, 0, 0 );
-}
-
-
 
 
 
@@ -7057,44 +7038,48 @@ header nav {
 
 /* Footer */
 
-.footer-cover {
-  background: #ffebb7;
-  background: linear-gradient(to bottom, #ffebb7 0%,#ffe084 100%);
+
+.footer-wrapper {
+  background: #fff url("/themes/sdk/images/paper_fibers/paper_fibers/paper_fibers.png");
   clip-path: polygon(
     0 8vw,
     100% 0,
     100% 100%,
     0 100%
   );
-  padding-bottom: 4em;
-  box-shadow: -2px -2px 2px #eee;
 }
-
-footer.footer {
-  background: inherit;
-  border-radius: 0 2em 0 0;
-  margin-top: -10em;
-  margin-bottom: 5em;
-  padding-top: 10em;
+footer ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-
-#block-googlemaps, #block-kontaktaoss-2 {
-  border: solid 1px #2e4057;
-  border-radius: 4px;
-  box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.5);
+footer h2 {
+  text-align: center;
 }
-
-
-footer nav {
-  /* http://colorzilla.com/gradient-editor/#ffe39e+0,ffd56b+100 */
-  background: #ffe39e; /* Old browsers */
-  background: linear-gradient(to right,  #ffe39e 0%,#ffd56b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+footer svg, header svg {
+  width: 2em;
+  height: 2em;
+  margin: 0.5em 0;
+}
+footer p {
+  margin: 0;
 }
 
 .region-footer {
   display: flex;
   justify-content:space-between;
   align-items:center;
+  margin: 0;
+  margin-top: 5em;
+  padding: 5em 0;
+}
+
+
+
+#block-googlemaps, #block-kontaktaoss-2 {
+  border: solid 1px #2e4057;
+  border-radius: 4px;
+  box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.5);
 }
 
 
@@ -7111,10 +7096,14 @@ footer nav {
 /* Kontakta oss */
 
 #block-kontaktaoss-2 {
+  color: #5d86a7;
   margin-top: 0em;
   width: 22em;
-  background: #5d86a7;
+  background: #fff;
   padding: 0 1em 1em 1em;
+}
+#block-kontaktaoss-2 a {
+  color: #5d86a7;
 }
 div.org, span.fax, span.region, span.country-name, abbr[title=voice] {
   display: none;
@@ -7122,36 +7111,11 @@ div.org, span.fax, span.region, span.country-name, abbr[title=voice] {
 abbr[title=voice]:after, abbr[title=fax]:after {
   content: ":";
 }
-footer {
-  background: #5d86a7;
-  color: #fff;
-}
-footer ul, li {
-  margin: 0;
-  padding: 0;
-}
-footer li {
-  list-style: none;
-}
-footer a {
-  color: #fff;
-}
-footer h2 {
-  text-align: center;
-}
 footer .social-media {
   color: #fff;
   display:flex;
   justify-content:space-between;
   align-items:center;
-}
-footer svg, header svg {
-  width: 2em;
-  height: 2em;
-  margin: 0.5em 0;
-}
-footer p {
-  margin: 0;
 }
 .adr svg, .phone svg, .epost svg {
   vertical-align: middle;
