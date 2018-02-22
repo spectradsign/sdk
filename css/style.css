@@ -6760,7 +6760,7 @@ button.close {
  * Original SDK Peach #f7bda5
  *
  *
- *
+ * https://coolors.co/export/png/5d86a7-5a8cad-6699cc-f7bda5-f9bea0
  *
  */
 
@@ -6798,7 +6798,11 @@ body {
 }
 */
 
-svg * {
+.main-container {
+  margin-top: 10em;
+}
+
+svg *, svg {
     transition: all 0.5s;
 }
 
@@ -6831,13 +6835,6 @@ div.region-navigation nav {
   flex: 3;
 }
 
-.navbar ul.social-media {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  flex-wrap: wrap;
-}
-
 
 
 header nav {
@@ -6859,6 +6856,7 @@ header nav {
 }
 
 
+
 .navbar .social-media {
   margin-top: 1em;
 }
@@ -6871,9 +6869,13 @@ header nav {
   background: inherit;
 }
 
-.navbar ul.social-media svg:hover {
-  background: #66a182;
+.navbar ul.social-media svg {
+  width: 2em;
+  height: 2em;
+  margin: 2px;
+  fill: transparent;
 }
+
 
 .underrubrik {
   margin-top: -18px;
@@ -6977,6 +6979,7 @@ body {
 }
 
 .papper {
+  min-height: 400px;
   padding: 1em;
   margin: 0.5em;
   background: #fff url("/themes/sdk/images/lightpaperfibers/lightpaperfibers/lightpaperfibers.png");
@@ -7070,13 +7073,14 @@ footer p {
   justify-content:space-between;
   align-items:center;
   margin: 0;
-  margin-top: 5em;
+  margin-top: 15em;
   padding: 5em 0;
 }
 
 
 
 #block-googlemaps, #block-kontaktaoss-2 {
+  background: #fff;
   border: solid 1px #2e4057;
   border-radius: 4px;
   box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.5);
@@ -7095,32 +7099,68 @@ footer p {
 
 /* Kontakta oss */
 
-#block-kontaktaoss-2 {
-  color: #5d86a7;
-  margin-top: 0em;
-  width: 22em;
-  background: #fff;
-  padding: 0 1em 1em 1em;
-}
-#block-kontaktaoss-2 a {
-  color: #5d86a7;
-}
-div.org, span.fax, span.region, span.country-name, abbr[title=voice] {
+span.fax, span.region, span.country-name, abbr[title=voice] {
   display: none;
 }
 abbr[title=voice]:after, abbr[title=fax]:after {
   content: ":";
 }
-footer .social-media {
-  color: #fff;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+
+#block-kontaktaoss-2 .vcard {
+  margin: 5em auto;
+  padding: 1em;
+  width: 22em;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  font-weight: bold;
+  color: #5d86a7;
 }
-.adr svg, .phone svg, .epost svg {
-  vertical-align: middle;
-  margin-right: 0.5em;
+
+#block-kontaktaoss-2 .fn a {
+  color: #5d86a7;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.fn {
+  grid-column: 1 / 7;
+  grid-row: 1;
+}
+
+.phone {
+  grid-column: 1 / 7;
+  grid-row: 2;
+}
+.epost {
+  grid-column: 1 / 7;
+  grid-row: 3 ;
 }
 .adr {
-  margin-bottom: 2em;
+  grid-column: 1 / 7;
+  grid-row: 4;
+}
+.twitter {
+  grid-column: 1;
+  grid-row: 5;
+}
+.facebook {
+  grid-column: 2;
+  grid-row: 5;
+}
+.instagram {
+  grid-column: 3;
+  grid-row: 5;
+}
+.googleplus {
+  grid-column: 4;
+  grid-row: 5;
+}
+.youtube {
+  grid-column: 5;
+  grid-row: 5;
+}
+.linkedin {
+  grid-column: 6;
+  grid-row: 5;
 }
