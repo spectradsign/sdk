@@ -10,3 +10,5 @@ Showstoppers
 * Se över formatering av Just Nu-sida
 * Se över formateringav produkt-lista
 * Se över formatering   av Just Nu-lista
+* English in EU-cookie-plugin
+
