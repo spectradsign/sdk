@@ -6762,6 +6762,9 @@ button.close {
  *
  * https://coolors.co/export/png/5d86a7-5a8cad-6699cc-f7bda5-f9bea0
  *
+ * BookmanOldStyle-Bold, Bookman Old Style
+ * BrushScriptMT; Brush Script MT
+ *
  */
 
 
@@ -6770,7 +6773,23 @@ button.close {
 
 
 
+ @font-face {
+     font-family: 'Brush Script MT';
+     src: local('Brush Script MT Italic'), local('BrushScriptMT'),
+         url('/themes/sdk/fonts/BrushScriptMT.woff2') format('woff2'),
+         url('/themes/sdk/fonts/BrushScriptMT.woff') format('woff');
+     font-weight: normal;
+     font-style: italic;
+ }
 
+ @font-face {
+     font-family: 'Bookman Old Style';
+     src: local('Bookman Old Style Bold'), local('BookmanOldStyle-Bold'),
+         url('/themes/sdk/fonts/BookmanOldStyle-Bold.woff2') format('woff2'),
+         url('/themes/sdk/fonts/BookmanOldStyle-Bold.woff') format('woff');
+     font-weight: bold;
+     font-style: normal;
+ }
 
 
 
@@ -6783,13 +6802,18 @@ html, body {
   padding: 0;
   height: 100%;
 }
+
 body {
-  display: flex;
-  flex-direction: column;
+  background: url('/themes/sdk/images/henrik.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-.main-cover, .main-container {
-  flex: 1 0 auto;
+.huvud {
+  min-height: 25em;
+  background: rgba(246,246,246,0);
 }
 
 /*
@@ -6805,6 +6829,32 @@ body {
 svg *, svg {
     transition: all 0.5s;
 }
+
+svg:hover {
+  fill: #ffe79e;
+  background: #ffe79e;
+}
+
+.adr svg, .phone svg, .epost svg {
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+
+/* Sticky footer background */
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-cover, .main-container {
+  flex: 1 0 auto;
+}
+
+
+
+
+/* header */
 
 header.navbar {
   background: inherit;
@@ -6826,23 +6876,16 @@ div.region-navigation {
   align-items: center;
 }
 
-
-div.region-navigation a, .social-media {
-
-}
-
-div.region-navigation nav {
-  flex: 3;
-}
-
-
-
-header nav {
-  font-size: 2em;
-}
-
+/* header - Logo */
 .logo img {
   height: 3.5em;
+}
+
+/* header - navigation */
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #2e4057;
+  font-size: 2em;
+  text-transform: uppercase;
 }
 
 .navbar-default .navbar-nav > .active > a.is-active, .navbar-default .navbar-nav > .active > a.is-active:hover, .navbar-default .navbar-nav > .active > a.is-active:focus {
@@ -6850,13 +6893,7 @@ header nav {
   background-color: transparent;
 }
 
-.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #2e4057;
-  text-transform: uppercase;
-}
-
-
-
+/* header - kontakt */
 .navbar .social-media {
   margin-top: 1em;
 }
@@ -6867,16 +6904,29 @@ header nav {
 
 .navbar ul.social-media svg {
   background: inherit;
-}
-
-.navbar ul.social-media svg {
   width: 2em;
   height: 2em;
   margin: 2px;
   fill: transparent;
 }
 
+header .social-media {
+  width: 20em;
+  display: grid;
+  grid-template-columns: 1fr;
+}
 
+.social-media .phone {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.social-media .epost {
+  grid-column: 1;
+  grid-row: 2 ;
+}
+
+/* header - Underrubrik */
 .underrubrik {
   margin-top: -18px;
   margin-left: 0;
@@ -6889,26 +6939,6 @@ header nav {
   text-shadow: 1px 1px 1px rgba(255,255,255,0.2);
   font-family: 'Calligraffitti', cursive;
 }
-
-body {
-  margin: 0;
-  padding: 0;
-  background: url('/themes/sdk/images/henrik.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.huvud {
-  min-height: 25em;
-  background: rgba(246,246,246,0);
-}
-
-
-
-
-
 
 
 
@@ -6959,7 +6989,6 @@ body {
 .postit h2 {
   margin-top: -0.5em;
 }
-
 
 .right {
   transform: rotate(4deg);
@@ -7019,11 +7048,6 @@ body {
 
 
 
-
-
-
-
-
 /* Recensioner */
 
 .eniro iframe {
@@ -7059,7 +7083,7 @@ footer ul, li {
 footer h2 {
   text-align: center;
 }
-footer svg, header svg {
+.vcard svg, header svg {
   width: 2em;
   height: 2em;
   margin: 0.5em 0;
@@ -7077,28 +7101,18 @@ footer p {
   padding: 5em 0;
 }
 
-
-
-#block-googlemaps, #block-kontaktaoss-2 {
-  background: #fff;
-  border: solid 1px #2e4057;
-  border-radius: 4px;
-  box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.5);
-}
-
-
 /* Google maps */
-
 #block-googlemaps {
-  height: 300px;
-  width: 500px;
+  background: #fff;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  height: 301px;
+  width: 501px;
   margin: 0;
   padding: 0;
 }
 
 
 /* Kontakta oss */
-
 span.fax, span.region, span.country-name, abbr[title=voice] {
   display: none;
 }
@@ -7106,12 +7120,10 @@ abbr[title=voice]:after, abbr[title=fax]:after {
   content: ":";
 }
 
-#block-kontaktaoss-2 .vcard {
+.vcard {
   /* Visitkort */
   padding: 1em;
-  max-width: 22em;
-  height: 200px;
-  width: 350px;
+  background: #fff;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   /* CSS Grid */
   display: grid;
@@ -7120,9 +7132,10 @@ abbr[title=voice]:after, abbr[title=fax]:after {
   /* Font */
   font-weight: bold;
   color: #5d86a7;
+  font-size: 1.3em;
 }
 
-#block-kontaktaoss-2 .fn a {
+.vcard .fn a {
   color: #5d86a7;
   text-decoration: none;
   font-size: 1.2em;

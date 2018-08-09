@@ -1,14 +1,14 @@
 Showstoppers
 
-* Typsnittet i logotypen fungerar inte
-* Menyn är inte centrerad och behöver uppföra sig vettigt i fler upplösningar
-* kontaktinfo i menyraden �behöver läggas på linje och �ikonerna inverteras(?)
-* I footern behöver "Kontakta oss" redigeras så den ser ut som ett visitkort
 * "Läs mer"-länkar till Just nu och Produkter
 * In med data på Om Oss-sidan, gärna snyggt formaterat...
 * Se över formatering av produktsia
 * Se över formatering av Just Nu-sida
 * Se över formateringav produkt-lista
 * Se över formatering   av Just Nu-lista
-* English in EU-cookie-plugin
+
+
+
+
+
 

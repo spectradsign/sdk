@@ -105,6 +105,7 @@
 {% block main %}
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
 
+    {# Post-it notes #}
     <div class="row">
       <div class="huvud col-sm-12">
         <div class="col-md-4 col-md-push-1 left">
@@ -190,18 +191,7 @@
       {% endif %}
     </div>
 
-
-
-
-{#
-<div class="kort row">
-  <div class="col-md-3">{{ render_block('dettaarvi') }}</div>
-  <div class="col-md-3"><section>{{ drupal_view('just_nu', 'block_1') }}</section></div>
-  <div class="col-md-3"><section>{{ drupal_view('en_produkt', 'block_1') }}</section></div>
-  <div class="col-md-3">{{ render_block('recensionfacebook') }}</div>
-</div>
-#}
-
+{# Huvudinnehåll "Detta är vi", Blogg och en slumpvis produkt #}
 <div class="kort row">
   <div class="col-md-3"><div class="papper">{{ render_block('dettaarvi') }}</div></div>
   <div class="col-md-4 col-md-offset-1"><div class="papper"><section>{{ drupal_view('just_nu', 'block_1') }}</section></div></div>
@@ -209,6 +199,7 @@
 </div>
 
 
+{# Recensioner
 <div class="papper recensioner row">
   <div class="col-md-12"><h2>Vad säger våra kunder?</h2></div>
   <div class="col-md-7"><script language='javascript1.1'>
@@ -224,7 +215,7 @@ var nr_transparency = true; // Set this to true to have a transparent widget wit
     <br />{{ render_block('recensionfacebook') }}
   </div>
 </div>
-
+#}
 
 
 
