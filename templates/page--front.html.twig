@@ -96,10 +96,10 @@
       {% if not navbar_attributes.hasClass(container) %}
         </div>
       {% endif %}
+      <h2 class="underrubrik">Allt från visitkort till byggritningar ~ Sedan 1999</h2>
     </header>
   {% endblock %}
 {% endif %}
-      <h2 class="underrubrik">Allt från visitkort till byggritningar ~ Sedan 1999</h2>
 
 {# Main #}
 {% block main %}
@@ -193,9 +193,9 @@
 
 {# Huvudinnehåll "Detta är vi", Blogg och en slumpvis produkt #}
 <div class="kort row">
-  <div class="col-md-4 col-sm-12"><div class="papper">{{ render_block('dettaarvi') }}</div></div>
-  <div class="col-md-4 col-sm-12"><div class="papper"><section>{{ drupal_view('just_nu', 'block_1') }}</section></div></div>
-  <div class="col-md-4 col-sm-12"><div class="papper"><section>{{ drupal_view('en_produkt', 'block_1') }}</section></div></div>
+  <div class="col-md-4 col-sm-12"><div class="papper"><h3>Om oss</h3>{{ render_block('dettaarvi') }}</div></div>
+  <div class="col-md-4 col-sm-12"><div class="papper"><section><h3>Just nu</h3>{{ drupal_view('just_nu', 'block_1') }}</section></div></div>
+  <div class="col-md-4 col-sm-12"><div class="papper"><section><h3>Produkter</h3>{{ drupal_view('en_produkt', 'block_1') }}</section></div></div>
 </div>
 
 

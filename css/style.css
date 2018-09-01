@@ -6850,7 +6850,10 @@ body {
   flex: 1 0 auto;
 }
 
-
+#navbar {
+  background: #fff url("/themes/sdk/images/paper_fibers/paper_fibers/paper_fibers.png");
+  width: 100%;
+}
 
 
 /* header */
@@ -6932,7 +6935,7 @@ header .social-media {
 
 /* header - Underrubrik */
 .underrubrik {
-  margin-top: -18px;
+  margin-top: -8px;
   margin-left: 0;
   margin-right: 0;
   color: #2e4057;
@@ -7048,7 +7051,15 @@ header .social-media {
   color: #2e4057;
 }
 
-
+.papper h3 {
+  float: right;
+  color: #5d86a7;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
 
 
 
