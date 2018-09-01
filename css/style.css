@@ -6887,6 +6887,11 @@ div.region-navigation {
   text-transform: uppercase;
 }
 
+
+#navbar .navbar-nav li:hover {
+  background: #5d86a7;
+}
+
 .navbar-default .navbar-nav > .active > a.is-active, .navbar-default .navbar-nav > .active > a.is-active:hover, .navbar-default .navbar-nav > .active > a.is-active:focus {
   font-weight: 600;
   background-color: transparent;
