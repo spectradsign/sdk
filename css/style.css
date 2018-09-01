@@ -6796,7 +6796,6 @@ button.close {
 
 
 
-
 html, body {
   margin: 0;
   padding: 0;
@@ -6935,6 +6934,7 @@ header .social-media {
   color: #66a182;
   text-align: center;
   font-size: 1em;
+  letter-spacing: 3px;
   font-weight: bold;
   text-shadow: 1px 1px 1px rgba(255,255,255,0.2);
   font-family: 'Calligraffitti', cursive;
@@ -7012,7 +7012,7 @@ header .social-media {
   padding: 1em;
   margin: 0.5em;
   background: #fff url("/themes/sdk/images/lightpaperfibers/lightpaperfibers/lightpaperfibers.png");
-  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
   position: relative;
   z-index: 0;
 }
